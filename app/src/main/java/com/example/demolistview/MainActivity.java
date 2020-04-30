@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ListView lv;
-    ArrayAdapter aa;
+    ArrayAdapter aadapter;
     ArrayList<Food> food;
 
 
@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Link this Activity object, the row.xml layout for
         //  each row and the food String array together
-        aa = new FoodAdapter(this, R.layout.row, food);
-        lv.setAdapter(aa);
+        aadapter = new FoodAdapter(this, R.layout.row, food);
+        lv.setAdapter(aadapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
